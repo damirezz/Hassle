@@ -1,0 +1,192 @@
+{%extends 'base.html'%} {%block style%}
+<!--------------Styling block---------------->
+<style>
+    body {
+        background-color: rgb(233, 158, 20)
+    }
+</style>
+
+{%endblock style%}
+<!--------------Styling block ends---------------->
+{%block body%}
+<div id="home">
+    <div class="site-header">
+        <div class="top-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="left-header">
+                            <span><i class="fa fa-phone"></i>080 080 0990</span>
+                            <span><i class="fa fa-envelope"></i>info@company.com</span> <br>
+                            <div>
+
+                            </div>
+                        </div>
+                        <!-- /.left-header -->
+                    </div>
+                    <!-- /.col-md-6 -->
+                    <div class="col-md-6 col-sm-6">
+                        <div class="right-header text-right">
+                            <ul class="social-icons">
+                                <li>
+                                    <a href="#" class="fa fa-facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-instagram"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-twitter"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-google-plus"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.left-header -->
+                    </div>
+                    <!-- /.col-md-6 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.top-header -->
+        <div class="main-header">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-6">
+
+                        <div class="logo" style='display:flex;'>
+                            <div class="image-in-logo">
+                                <img src="static/images/half-gold.jpg" height='20' width='30' alt="">
+                            </div>
+                            <div class="text-in-logo">
+                                <a class="big-screen-text" href="#" title="Dreri">
+                                    <h1>CITRINE REWARDS</h1>
+                                </a>
+                            </div>
+
+                            <div class="text-in-logo">
+                                <a class="small-screen-text" href="#" title="Dreri">
+                                    <h2 style="font-weight: bolder;">CITRINE REWARDS
+                                    </h2>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.logo -->
+                    </div>
+                    <!-- /.col-md-4 -->
+
+                    <div class="menu text-right hidden-sm hidden-xs">
+                        <ul>
+
+                            <li><a href="{{url_for('user.logout')}}" target="_top" class="external">Sign out</a></li>
+                            <li>
+                                <a href="{{url_for('user.dashboard')}}" target="_top" class="external">Dashboard</a>
+                            </li>
+
+                            <li><a href="{{url_for('user.profile')}}" target="_top" class="external">My Account</a>
+                            </li>
+
+                            <li>
+                                <a href="#Testimonies">Testimonies</a>
+                            </li>
+
+
+
+                        </ul>
+                    </div>
+                    <!-- /.menu -->
+                </div>
+                <!-- /.col-md-8 -->
+            </div>
+            <!-- /.row -->
+            <div class="responsive-menu text-right visible-xs visible-sm">
+                <a href="#" class="toggle-menu fa fa-bars" style="margin-top:-70px;"></a>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#Testimonies">Testimonies</a></li>
+                        <li><a href="{{url_for('user.dashboard')}}">Dashboard</a></li>
+
+                        <li><a href="{{url_for('user.profile')}}" target="_top" class="external">My Account</a></li>
+                        <li>
+                            <a href="#Referrals">Referrals</a></li>
+                        <li>
+                            <li><a href="{{url_for('user.logout')}}" target="_top" class="external">Sign out</a></li>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- /.menu -->
+                </di v>
+                <!-- /.r        esponsive-menu -->
+            </div>
+            <!-- /.c    ontainer -->
+        </div>
+        <!-- /.heade             r -->
+        <!-- /.site-     header -->
+    </div>
+</div>
+</div>
+<br><br><br>
+<div class="signup ">
+    <div class="cont              ainer">
+        <div cla ss="breadcrumb">
+            <p>
+                <h1 style="font-size:x-large;display: flex;justify-content: center;font-family:'Times New Roman', Times, serif;"> You are Required to pay for your Account Activation</h1>
+                <hr>
+                <p>
+                    <h1 style="font-size:large;display: flex;justify-content: center;font-family:'Times New Roman', Times, serif;">
+                        Amount:&#x20A6 1000</h1>
+                </p>
+                <hr>
+                <p>
+                    <h1 style="font-size:large;display: flex;justify-content: center;font-family:'Times New Roman', Times, serif;">
+                        Status:Not Paid</h1>
+                </p>
+                <hr>
+
+        </div>
+
+
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="margin-top:190px; outline:none">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Bank Account Info
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                    </div>
+                    <div class="modal-body">
+                        <span>Account Name:Okoro Jane
+                        </span>
+                    </div>
+                    <div class="modal-body">
+                        <span>Bank Name:Access Bank</span>
+                    </div>
+                    <div class="modal-body">
+                        <span>Account Number:012334452</span>
+                    </div>
+                    <div class="modal-body">
+                        <span>Phone Number:+2341012334452</span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" style="width:100%;height:40px;display:flex; justify-content:center;">
+Bank Details
+    </div>
+
+{%endblock  body%}

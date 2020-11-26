@@ -1,0 +1,136 @@
+{%extends 'base.html'%} {%block style%}
+<!--------------Styling block---------------->
+<style>
+    body {
+        background-color: rgb(212, 147, 24);
+    }
+</style>
+
+{%endblock style%}
+<!--------------Styling block ends---------------->
+{%block body%}
+<div id="home">
+    <div class="site-header">
+        <div class="top-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="left-header">
+                            <span><i class="fa fa-phone"></i>080 080 0990</span>
+                            <span><i class="fa fa-envelope"></i>info@company.com</span>
+                        </div>
+                        <!-- /.left-header -->
+                    </div>
+                    <!-- /.col-md-6 -->
+                    <div class="col-md-6 col-sm-6">
+                        <div class="right-header text-right">
+                            <ul class="social-icons">
+                                <li>
+                                    <a href="#" class="fa fa-facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-instagram"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-twitter"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-google-plus"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.left-header -->
+                    </div>
+                    <!-- /.col-md-6 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.top-header -->
+
+
+    </div>
+    <!-- /.site-header -->
+    <div class="main-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-6">
+
+                    <div class="logo">
+
+
+
+                        <span class="#" title="Dreri" style='display:inline-block; font-family: fantasy; font-size:x-large;'>
+                            <img src="static/images/half-gold.jpg" height='23' width='30 ' alt=""> CITRINE REWARDS</span>
+
+
+                    </div>
+                    <!-- /.logo -->
+                </div>
+                <!-- /.col-md-4 -->
+                <div class="col-md-8 col-sm-8 col-xs-6">
+                    <div class="menu text-right hidden-sm hidden-xs">
+                        <ul>
+
+                            <li><a href="{{url_for('user.signup')}}" target="_top" class="external">Sign up</a></li>
+                            <li><a href="{{url_for('user.signin')}}" target="_top" class="external">Log in</a></li>
+                            <li>
+                                <a href="#Testimonies">Testimonies</a>
+                            </li>
+                            <li><a href="{{url_for('user.profile')}}" target="_top" class="external">My Account</a></li>
+
+
+                        </ul>
+                    </div>
+                    <!-- /.menu -->
+                </div>
+                <!-- /.col-md-8 -->
+            </div>
+            <!-- /.row -->
+            <div class="responsive-menu text-right visible-xs visible-sm">
+                <a href="#" class="toggle-menu fa fa-bars" style="margin-top:-70px;"></a>
+                <div class="menu">
+                    <ul>
+
+                        <li><a href="#Testiomonies">Testimonies</a></li>
+                        <li><a href="{{url_for('user.profile')}}" target="_top" class="external">My Account</a></li>
+
+                        <li>
+                            <a href=" {{url_for( 'user.signup')}} " class="external ">Sign up</a>
+                        </li>
+                        <li>
+                            <a href="{{url_for( 'user.signin')}} " class="external ">Sign in</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.menu -->
+            </div>
+            <!-- /.responsive-menu -->
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.header -->
+</div>
+<!-- /.site-header -->
+</div>
+</div><br><br><br><br><br><br> {%with messages = get_flashed_messages()%} {%if messages%} {%for message in messages%}
+<div id="notification" class="alert-success" style="cursor: pointer;font-size:large;font-family:'Times New Roman', Times, serif;height:50px">
+    <span onclick="hideNotification()" style="font-size: larger; float: right; font-weight: bolder;"> &Cross; <span
+            style="font-size: smaller;">close</span> </span>
+    <p>{{message}}</p>
+</div>
+{%endfor%} {%endif%} {%endwith%}
+
+
+<div class="signup ">
+    <div class="container ">
+        <div class="jumbotron ">
+
+            <p>You will required to pay a one time fee of one thousand naira only to the principal guider on the system to access your account</p>
+        </div>
+        <a href="{{url_for('account.add_account')}}" type="button " class="btn btn-primary" style="width:100%;height:40px;display:flex; justify-content:center; ">Pay Fee</a>
+    </div>
+
+    {%endblock body%}

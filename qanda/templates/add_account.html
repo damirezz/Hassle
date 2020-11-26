@@ -1,0 +1,119 @@
+{%extends 'base.html'%} {%block style%}
+<!--------------Styling block---------------->
+<style>
+    body {
+        background-color: rgb(233, 158, 20);
+    }
+</style>
+
+{%endblock style%}
+<!--------------Styling block ends---------------->
+{%block body%}
+<div id="home">
+    <div class="site-header">
+        <div class="top-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="left-header">
+                            <span><i class="fa fa-phone"></i>080 080 0990</span>
+                            <span><i class="fa fa-envelope"></i>info@company.com</span>
+                        </div>
+                        <!-- /.left-header -->
+                    </div>
+                    <!-- /.col-md-6 -->
+                    <div class="col-md-6 col-sm-6">
+                        <div class="right-header text-right">
+                            <ul class="social-icons">
+                                <li>
+                                    <a href="#" class="fa fa-facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-instagram"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-twitter"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-google-plus"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.left-header -->
+                    </div>
+                    <!-- /.col-md-6 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.top-header -->
+
+
+    </div>
+    <!-- /.site-header -->
+</div>
+
+<div class="signup">
+    <p style="text-align: center; font-size: xx-large; margin-bottom: 20px;">Bank Details</p>
+    <form action="" method="post">
+
+        <div class="form-group">
+            <input type="integer" placeholder="Account Number" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <input list="course" type="text" placeholder='Select Bank' class='form-control'>
+            <datalist id="course">
+               <option> Access Bank</option>
+                <option>  Fidelity Bank</option>
+                <option> First City Monument Bank</option>
+                <option>First Bank of Nigeria </option>
+                <option> Guaranty Trust Bank</option>
+                <option>Union Bank of Nigeria</option>
+                <option>United Bank for Africa</option>
+                <option> Zenith Bank</option>
+                <option> Ecobank</option>
+                <option>Heritage Banking Company Limited</option>
+                <option>Keystone Bank</option>
+                <option>Polaris Bank Limited</option>
+                <option>Stanbic IBTC Bank </option>
+                <option>Standard Chartered</option>
+                <option>Sterling Bank </option>
+
+
+            </datalist>
+        </div>
+
+        <a style="float: right; " href=" ">Forget Password</a> <br>
+
+
+
+        <input style="color: white; width: 100%; " class="btn btn-primary" type="button" value="Proceed with details">
+    </form>
+    <div class="account-notice ">
+        <p>I don't have an account, click <a href="{{url_for( 'user.signup')}} ">here</a> to get started</p>
+    </div>
+</div>
+
+
+<div class="site-footer " style="position: absolute; bottom: 0; width: 100%; ">
+    <div class="container ">
+        <div class="row ">
+            <div class="col-md-8 col-sm-8 col-xs-12 ">
+                <p>Copyright &copy; 2084 Company Name</p>
+            </div>
+            <!-- /.col-md-6 -->
+            <div class="col-md-4 col-sm-4 col-xs-12 ">
+                <div class="go-top ">
+                    <a href="# " id="go-top ">
+                        <i class="fa fa-angle-up "></i> Back to Top
+                    </a>
+                </div>
+            </div>
+            <!-- /.col-md-6 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</div>{%endblock body%}

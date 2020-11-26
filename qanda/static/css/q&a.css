@@ -1,0 +1,96 @@
+@media (min-width:600px){
+   .signup{
+       width: 50% !important;
+   }
+   .logo .text-in-logo .small-screen-text{
+       display: none;
+   }
+   
+}
+
+@media (max-width:600px){
+    .logo .text-in-logo .big-screen-text{
+        display: none;
+    }
+}
+
+.logo .text-in-logo{
+    margin-left: 2px;
+}
+
+.signup{
+    width: 90%;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background: white;
+}
+
+.signup-profile{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.signup input{
+    padding: 10px;
+    border: thin solid #f09f6d;
+    padding: 10px;
+    box-shadow: none;
+}
+
+.signup-name{
+    display: flex;
+    justify-content: space-between;
+}
+
+.last-name, .first-name{
+    width: 49%;
+}
+
+.account-notice{
+    width: 100%;
+    background: rgb(250, 250, 250);
+    margin-top: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
+.logo{
+    display: flex;
+}
+
+.notification_success{
+    background-color: rgb(182, 255, 182);
+    border-left: 4px solid green;
+    width: 90%;
+    margin: 30px auto;
+    padding: 10px;
+    color: rgb(0, 163, 0);
+}
+
+.notification_warning{
+    background-color: rgb(254, 255, 236);
+    border-left: 4px solid rgb(255, 230, 0);
+    width: 90%;
+    margin: 30px auto;
+    padding: 10px;
+    color: rgb(230, 207, 0);
+}
+
+.notification_danger{
+    background-color: rgb(255, 206, 206);
+    border-left: 4px solid red;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: red;
+}
+
+.hide{
+    display: none !important;
+}

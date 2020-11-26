@@ -1,0 +1,115 @@
+{%extends 'base.html'%} {%block style%}
+<!--------------Styling block---------------->
+<style>
+    body {
+        background-color: rgb(233, 158, 20);
+    }
+</style>
+
+{%endblock style%}
+<!--------------Styling block ends---------------->
+
+{%block body%}
+<div id="home">
+    <div class="site-header">
+        <div class="top-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="left-header">
+                            <span><i class="fa fa-phone"></i>080 080 0990</span>
+                            <span><i class="fa fa-envelope"></i>info@company.com</span>
+                        </div>
+                        <!-- /.left-header -->
+                    </div>
+                    <!-- /.col-md-6 -->
+                    <div class="col-md-6 col-sm-6">
+                        <div class="right-header text-right">
+                            <ul class="social-icons">
+                                <li>
+                                    <a href="#" class="fa fa-facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-instagram"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-twitter"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-google-plus"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.left-header -->
+                    </div>
+                    <!-- /.col-md-6 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.top-header -->
+
+
+    </div>
+    <!-- /.site-header -->
+</div>
+<!-- /#home -->
+
+
+
+
+<div class="signup">
+    {%if form.errors%}
+    <div id="notification" class="notification_danger " style="cursor: pointer;">
+        <span onclick="hideNotification()" style="font-size: larger; float: right; font-weight: bolder;"> &Cross; <span
+                    style="font-size: smaller;">close</span> </span>
+
+
+        {%for error in form.email.errors%}
+        <ul>
+            <li>{{error}}</li>
+        </ul>
+        {%endfor%} {%for error in form.password.errors%}
+        <ul>
+            <li>{{error}}</li>
+        </ul>
+        {%endfor%}
+    </div>
+    {%endif%} {%with messages = get_flashed_messages(with_categories=true)%} {%if messages%} {%for category, message in messages%}
+    <div id="notification" class="notification_warning alert alert-success{{category}}" style="cursor: pointer;">
+        <span onclick="hideNotification()" style="font-size: larger; float: right; font-weight: bolder;"> &Cross; <span style="font-size: smaller;">close</span> </span>
+        <p>{{message}}</p>
+    </div>
+    {%endfor%} {%endif%} {%endwith%}
+    <p style="text-align: center; font-size: xx-large; margin-bottom: 20px;">SIGN IN</p>
+    <form action="" method="post">
+        {{form.csrf_token}}
+
+        <div class="form-group">
+            {{form.email(style="width: 100%;", placeholder="Email")}}
+        </div>
+
+
+
+        <div class="form-group">
+            {{form.password(style="width: 100%;", placeholder="Password")}}
+        </div>
+
+        <a style="float: right;" href="">Forget Password</a> <br>
+
+
+        <button style="color: white; width: 100%;" class="btn btn-primary" type="submit">
+                Sign me up
+            </button>
+
+    </form>
+    <div class="account-notice">
+        <p>I don't have an account, click <a href="{{url_for('user.signup')}}">here</a> to get started</p>
+    </div>
+</div>
+
+
+<!-- /.site-footer -->
+
+{%endblock body%}
